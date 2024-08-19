@@ -1,58 +1,69 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: 'Nahid', Arial;
-    justify-content: center;
 }
-body{
-    background-color: rgb(90, 24, 0);
-    color: white;
-    padding: 10px;
-}
-.main{
-    display: grid;
-    grid-template-columns: 1fr 460px;
-    column-gap: 10px;
-}
-.info-container{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
-    row-gap: 20px;
-    border-radius: 5px;
-}
-.profile{
-    position: relative;
+
+body {
     background-color: black;
+    color: white;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    justify-content: center;
+    flex-shrink: 0;
+    padding: 20px 20px;
+}
+
+.info {
+    flex: 1;
+    max-width: 435px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding-bottom: 20px;
+}
+
+.profile {
+    position: relative;
+    background-color: rgb(31, 31, 31);
     padding: 20px;
     border-radius: 10px;
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
-    grid-template-areas: 
-    'name name'
-    'left right';
+    grid-template-areas:
+        'name name'
+        'left right';
     justify-content: start;
-    
+
 }
-.name{
+
+.name {
     grid-area: name;
     margin-bottom: 15px;
     line-height: 20px;
 }
-.profile-left{
+
+.profile-left {
     grid-area: left;
     display: flex;
     justify-content: start;
 }
-.profile-photo{
+
+.profile-photo {
     object-fit: cover;
     width: 172px;
     height: 172px;
     border-radius: 7px;
-    
+
 }
-.profile-right{
+
+.profile-right {
     grid-area: right;
     border-radius: 5px;
     display: flex;
@@ -63,26 +74,29 @@ body{
     justify-content: start;
 }
 
-.profile-right div{
+.profile-right div {
     display: flex;
     align-items: center;
 }
-.profile-right img,svg{
+
+.profile-right img,
+svg {
     width: 18px;
     color: #cea261;
     margin-left: 20px;
     margin-right: 10px;
 }
 
-.about{
+.about {
     position: relative;
-    background-color: black;
+    background-color: rgb(31, 31, 31);
     display: flex;
     justify-content: end;
     border-radius: 10px;
     padding: 20px;
 }
-.title{
+
+.title {
     background-color: black;
     display: flex;
     padding: 5px 15px;
@@ -92,13 +106,15 @@ body{
     left: 43%;
     top: -15px;
 }
-.about-content{
+
+.about-content {
     direction: rtl;
     margin-top: 10px;
 }
-.skills{
+
+.skills {
     position: relative;
-    background-color: black;
+    background-color: rgb(31, 31, 31);
     padding: 20px;
     padding-top: 40px;
     border-radius: 10px;
@@ -106,59 +122,84 @@ body{
     flex-direction: column;
     row-gap: 15px;
 }
-.major-title{
+
+.major-title {
     display: flex;
     justify-content: center;
     flex: 1;
     padding: 10px 0px;
 }
-.major{
+
+.major {
     color: orangered;
     border-bottom: solid 2px orangered;
-    
+
 }
-.skill{
+
+.skill {
     display: flex;
     flex: 1;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    
+    padding: 0 5%;
+
 }
-.level{
+
+.level {
     background-color: gray;
     width: 250px;
     height: 15px;
     border-radius: 10px;
 }
-.charge{
+
+.charge {
     background-color: orangered;
     height: 15px;
     border-radius: 10px;
 }
-.html-css{
+
+.html-css {
     width: 70%;
 }
-.bootstrap{
+
+.bootstrap {
     width: 80%;
 }
-.javascript{
+
+.javascript {
     width: 70%;
 }
-.react{
+
+.react {
     width: 50%;
 }
-.english{
+
+.english {
     width: 60%;
 }
-.projects-container{
-    position: relative;
-    background-color: black;
-    margin-top: 10px;
-    padding: 20px;
-    border-radius: 10px;
-    height: auto;
-    
+
+.projects-container {
+    flex: 3;
+    /* max-width: 1000px; */
+    min-width: 435px;
 }
 
+.projects {
+    
+    position: relative;
+    background-color: rgb(31, 31, 31);
+    padding: 20px;
+    border-radius: 10px;
+}
 
+@media (max-width : 699px) {}
 
+@media (min-width : 700px) and (max-width : 799px) {}
+
+@media (min-width : 800px) and (max-width : 1099px) {}
+
+@media (min-width : 1100px) and (max-width : 1424px) {}
+
+@media (min-width : 1425px) and (max-width : 1749px) {}
+
+@media (min-width : 1750px) {}
