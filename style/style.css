@@ -40,13 +40,21 @@ body {
         'name name'
         'left right';
     justify-content: start;
-
+ 
 }
 
 .name {
     grid-area: name;
     margin-bottom: 15px;
     line-height: 20px;
+}
+.fname{
+    font-size: 20px;
+    direction: ltr;
+}
+.career{
+    font-size: 14px;
+    color: gray;
 }
 
 .profile-left {
@@ -182,24 +190,65 @@ svg {
     flex: 3;
     max-width: 1250px;
     min-width: 435px;
+    
 }
 
 .projects {
-    
     position: relative;
     background-color: rgb(31, 31, 31);
     padding: 20px;
     border-radius: 10px;
 }
 
-@media (max-width : 699px) {}
 
-@media (min-width : 700px) and (max-width : 799px) {}
+@media (max-width : 499px) {
+    .info {
+        max-width: 800px;
+        min-width: 340px;
+    }
+    .projects-container {
+        max-width: 800px;
+        min-width: 340px;
+    }
+    .profile {
+        grid-template-areas:
+            'left name'
+            'right right';
+    }
+    .profile-photo {
+        width: 90px;
+        height: 90px;
+    }
+    .name {
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+    }
+    .fname{
+        font-size: 30px;
+        line-height: 30px;
+    }
+    .career{
+        font-size: 18px;
+    }
+   
+    .profile-right {
+        row-gap: 10px;
+        padding-top: 20px;
+    }
+    .profile-right img,
+    svg {
+    margin-left: 0px;
+    margin-right: 10px;
+}
+}
 
-@media (min-width : 800px) and (max-width : 1099px) {}
+@media (min-width : 500px) and (max-width : 935px) {
+    .info {
+        max-width: 800px;
+    }
+    .projects-container {
+        max-width: 800px;
+    }
+}
 
-@media (min-width : 1100px) and (max-width : 1424px) {}
-
-@media (min-width : 1425px) and (max-width : 1749px) {}
-
-@media (min-width : 1750px) {}
