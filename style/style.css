@@ -180,7 +180,7 @@ svg {
 
 .projects-container {
     flex: 3;
-    /* max-width: 1000px; */
+    max-width: 1250px;
     min-width: 435px;
 }
 
