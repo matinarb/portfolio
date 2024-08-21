@@ -40,7 +40,7 @@ body {
         'name name'
         'left right';
     justify-content: start;
- 
+
 }
 
 .name {
@@ -48,11 +48,13 @@ body {
     margin-bottom: 15px;
     line-height: 20px;
 }
-.fname{
-    font-size: 20px;
+
+.fname {
+    font-size: 30px;
     direction: ltr;
 }
-.career{
+
+.career {
     font-size: 14px;
     color: gray;
 }
@@ -99,7 +101,6 @@ svg {
     position: relative;
     background-color: rgb(31, 31, 31);
     display: flex;
-    justify-content: end;
     border-radius: 10px;
     padding: 20px;
 }
@@ -111,7 +112,7 @@ svg {
     border: solid 2px orangered;
     border-radius: 10px;
     position: absolute;
-    left: 43%;
+    left: auto;
     top: -15px;
 }
 
@@ -150,12 +151,12 @@ svg {
     justify-content: space-between;
     align-items: center;
     padding: 0 5%;
-
 }
 
 .level {
     background-color: gray;
-    width: 250px;
+    /* width: 250px; */
+    width: 60%;
     height: 15px;
     border-radius: 10px;
 }
@@ -190,7 +191,7 @@ svg {
     flex: 3;
     max-width: 1250px;
     min-width: 435px;
-    
+
 }
 
 .projects {
@@ -206,49 +207,62 @@ svg {
         max-width: 800px;
         min-width: 340px;
     }
+
     .projects-container {
         max-width: 800px;
         min-width: 340px;
     }
+
     .profile {
         grid-template-areas:
             'left name'
             'right right';
     }
+
     .profile-photo {
         width: 90px;
         height: 90px;
     }
+
     .name {
         display: flex;
         align-items: center;
         padding-left: 10px;
     }
-    .fname{
+
+    .fname {
         font-size: 30px;
         line-height: 30px;
     }
-    .career{
+
+    .career {
         font-size: 18px;
     }
-   
+
     .profile-right {
         row-gap: 10px;
         padding-top: 20px;
     }
+
     .profile-right img,
     svg {
-    margin-left: 0px;
-    margin-right: 10px;
-}
+        margin-left: 0px;
+        margin-right: 10px;
+    }
+    .skill {
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+    
+    }
 }
 
 @media (min-width : 500px) and (max-width : 935px) {
     .info {
         max-width: 800px;
     }
+
     .projects-container {
         max-width: 800px;
     }
 }
-
